@@ -3,7 +3,7 @@
 todo.py by hoverAdev
 This file generates a TODO.md based on files in the working directory.
 Directories will be traversed recursively.
-Files with todo in the name with be ignored (ex "todo.yml", "TODO.md"
+Files with todo in the name with be ignored (eg "todo.yml", "TODO.md")
 """
 
 import os
@@ -31,7 +31,7 @@ for (root, dirs, files) in os.walk('.'):
                     lines = text.splitlines()
                     for line in lines:
                         if "TODO" in line:
-                            md.write(f"* {lines.index(line)} {line}\n")
+                            md.write(f"* {lines.index(line)}: `{line}`\n")
                     md.write("\n")
                 f.close()
 
