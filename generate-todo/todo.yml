@@ -16,7 +16,7 @@ jobs:
         
       - name: Create TODO.md
         run: |
-          curl DIR_TO_TODO/todo.py
+          curl https://raw.githubusercontent.com/hoverAdev/actions/main/generate-todo/todo.py
           python todo.py
         
       - name: Push changes
