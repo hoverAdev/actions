@@ -27,14 +27,11 @@ for (root, dirs, files) in os.walk('.'):
 
             if textfile:
                 if "TODO" in text:
-                    print(f"## {rpath}")
                     md.write(f"## {rpath}\n")
                     lines = text.splitlines()
                     for line in lines:
                         if "TODO" in line:
-                            print(f"* {lines.index(line)} {line}")
                             md.write(f"* {lines.index(line)} {line}\n")
-                    print("\n")
                     md.write("\n")
                 f.close()
 
