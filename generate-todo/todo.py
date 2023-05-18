@@ -31,7 +31,7 @@ for (root, dirs, files) in os.walk('.'):
                     lines = text.splitlines()
                     for line in lines:
                         if "TODO" in line:
-                            md.write(f"* {lines.index(line)}: `{line}`\n")
+                            md.write(f"* {lines.index(line)}: `{line.lstrip()}`\n")
                     md.write("\n")
                 f.close()
 
